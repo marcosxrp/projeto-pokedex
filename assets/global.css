@@ -25,12 +25,19 @@ header{
     align-items: center;
 }
 
-.pokedex_name{
-    max-height: 55%;
+.menu_container a{
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .logo{
-    max-height: 65%;
+    height: 65%;
+    align-self: center;
+}
+
+.pokedex_name{
+    max-height: 55%;
 }
 
 .menu_container svg{
@@ -57,57 +64,3 @@ header{
         border-radius: 30px;
     }
 }
-
-@media(min-width: 1200px){
-    .container{
-        max-width: 1500px;
-    }
-}
-
-
-
-
-
-/*parte antiga do codigo para saber tamanho nas coisas no modo pc
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-
-header{
-    height: 10vh;
-    width: 100vw;
-}
-
-.menu_container{
-    background-color: #E8EBF2;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1rem;
-    align-items: center;
-}
-
-.pokedex_name{
-    max-height: 55%;
-}
-
-.logo{
-    max-height: 80%;
-}
-
-.menu_container svg{
-    height: 80%;
-}
-
-.container{
-    margin: 0 auto;
-    padding: 1rem;
-    width: 100vw;
-    height: 90vh;
-}
-*/
