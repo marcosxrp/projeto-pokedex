@@ -1,9 +1,8 @@
-# **Projeto PokéDex** ![logo](assets/images/favicon.ico)
+# **Projeto PokeDex** ![logo](assets/images/favicon.ico)
 
-## O site tem como objetivo:
-- Listagem dos pokemons
-- Filtragem
+## 📌O Site tem como objetivos:
+- Listagem dos pokemons📝
+- Responsividade🌐
+- Filtragem:🏷️
+    - Tipo
     - Geração
-    - Tipos
-    - Letra
-- Responsividade

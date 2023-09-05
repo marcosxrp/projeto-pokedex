@@ -6,30 +6,108 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.menu_container{
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    justify-content: space-between;
-    padding: .8em 1em;
+body{
+    height: 100%;
     background-color: #E8EBF2;
 }
+
+header{
+    height: 10vh;
+    width: 100vw;
+}
+
+.menu_container{
+    background-color: #E8EBF2;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    align-items: center;
+}
+
+.pokedex_name{
+    max-height: 55%;
+}
+
 .logo{
-    max-height: 100%;
+    max-height: 65%;
 }
 
 .menu_container svg{
-    height: 100%;
+    height: 65%;
 }
 
 .container{
     margin: 0 auto;
-    height: 100vh;
-    background-color: #E8EBF2;
+    padding: 1rem;
+    width: 100vw;
+    height: 100%;
+    background-color: #E83E34;
 }
 
-.container h1{
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 700;
+@media(min-width: 576px){
+    .container{
+        height: 100vh;
+    }
 }
+
+@media(min-width: 768px){
+    .container{
+        width: 90vw;
+        border-radius: 30px;
+    }
+}
+
+@media(min-width: 1200px){
+    .container{
+        max-width: 1500px;
+    }
+}
+
+
+
+
+
+/*parte antiga do codigo para saber tamanho nas coisas no modo pc
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    height: 10vh;
+    width: 100vw;
+}
+
+.menu_container{
+    background-color: #E8EBF2;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    align-items: center;
+}
+
+.pokedex_name{
+    max-height: 55%;
+}
+
+.logo{
+    max-height: 80%;
+}
+
+.menu_container svg{
+    height: 80%;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100vw;
+    height: 90vh;
+}
+*/
