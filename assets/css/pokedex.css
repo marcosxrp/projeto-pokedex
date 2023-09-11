@@ -1,14 +1,87 @@
 .pokemons{
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr;
     list-style: none;
     gap: 1rem;
 }
 
+.normal {
+    background-color: #a6a877;
+}
+
+.grass {
+    background-color: #77c850;
+}
+
+.fire {
+    background-color: #ee7f30;
+}
+
+.water {
+    background-color: #678fee;
+}
+
+.electric {
+    background-color: #f7cf2e;
+}
+
+.ice {
+    background-color: #98d5d7;
+}
+
+.ground {
+    background-color: #dfbf69;
+}
+
+.flying {
+    background-color: #a98ff0;
+}
+
+.poison {
+    background-color: #a040a0;
+}
+
+.fighting {
+    background-color: #bf3029;
+}
+
+.psychic {
+    background-color: #f65687;
+}
+
+.dark {
+    background-color: #725847;
+}
+
+.rock {
+    background-color: #b8a137;
+}
+
+.bug {
+    background-color: #a8b720;
+}
+
+.ghost {
+    background-color: #6e5896;
+}
+
+.steel {
+    background-color: #b9b7cf;
+}
+
+.dragon {
+    background-color: #6f38f6;
+}
+
+.fairy {
+    background-color: #f9aec7;
+}
+
 .pokemon{
+    width: 100%;
     padding: 1rem;
     border-radius: 20px;
-    background-color: green;
 }
 
 .name_number{
@@ -17,7 +90,7 @@
 }
 
 .poke_name{
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: 1.28rem;
     font-weight: 700;
 }
@@ -35,6 +108,7 @@
 }
 
 .types{
+    list-style: none;
     display: flex;
     flex-direction: column;
     gap: .4rem;
@@ -42,14 +116,14 @@
 
 .poke_type{
     font-size: 1.1rem;
-    padding: .3rem;
+    padding: .3rem .6rem;
     text-align: center;
-    background-color: green;
     filter: brightness(80%);
     border-radius: 20px;
 }
 
 .poke_img{
+    max-width: 25vw;
     height: 90px;
 }
 
@@ -58,23 +132,18 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
-@media(min-width: 768px){
+@media(min-width: 992px){
     .pokemons{
         grid-template-columns: repeat(3, 1fr);
     }
 }
-@media(min-width: 992px){
+@media(min-width: 1200px){
     .pokemons{
         grid-template-columns: repeat(4, 1fr);
     }
 }
-@media(min-width: 1200px){
+@media(min-width: 1500px){
     .pokemons{
         grid-template-columns: repeat(5, 1fr);
-    }
-}
-@media(min-width: 1400px){
-    .pokemons{
-        grid-template-columns: repeat(6, 1fr);
     }
 }

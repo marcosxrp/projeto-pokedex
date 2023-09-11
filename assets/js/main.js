@@ -3,29 +3,25 @@ const limit = 10
 
 function convertPokemonToLi(pokemon) {
     return `
-        <li class="pokemon">
+        <li class="pokemon ${pokemon.type}">
             <div class="name_number">
                 <span class="poke_name">
                     ${pokemon.name}
                 </span>
-                <span class="poke_number">001</span>
+                <span class="poke_number">#${String(pokemon.number).padStart(3, "0")}</span>
             </div>
             <div class="types_img">
-                <div class="types">
-                    <span class="poke_type">
-                        Grass
-                    </span>
-                    <span class="poke_type">
-                        Poison
-                    </span>
-                </div>
-                <img class="poke_img" src="assets/images/bulbasaur.png" alt="bulbasaur">
+                <ol class="types">
+                    ${pokemon.types.map((type) => `<li class="poke_type ${type}">${type}</li>`).join('')}
+                </ol>
+                <img class="poke_img" src="${pokemon.photo}" alt="${pokemon.name}">
             </div>
         </li>
     `
 }
 
-pokeAPI.getPokemons().then((pokemons) => {
-    
-}
-)
+const pokemonList = document.getElementById(`pokemonList`)
+
+pokeAPI.getPokemons().then((pokemons = []) => {
+    pokemonList.innerHTML += pokemons.map(convertPokemonToLi).join("")
+})
