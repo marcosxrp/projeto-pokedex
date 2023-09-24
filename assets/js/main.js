@@ -1,5 +1,7 @@
-const offset = 0
-const limit = 10
+let offset = 0
+const limit = 100
+const pokemonList = document.getElementById(`pokemonList`)
+const loadButton = document.getElementById(`loadButton`)
 
 function convertPokemonToLi(pokemon) {
     return `
@@ -20,8 +22,16 @@ function convertPokemonToLi(pokemon) {
     `
 }
 
-const pokemonList = document.getElementById(`pokemonList`)
+function loadPokemons(){
+    pokeAPI.getPokemons(offset, limit).then((pokemons = []) => {
+            pokemonList.innerHTML += pokemons.map(convertPokemonToLi).join("")
+        })
+}
 
-pokeAPI.getPokemons().then((pokemons = []) => {
-    pokemonList.innerHTML += pokemons.map(convertPokemonToLi).join("")
+loadPokemons()
+
+loadButton.addEventListener("click", () => {
+    offset += limit
+    loadPokemons()
+
 })
